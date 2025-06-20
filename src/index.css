@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Custom Color Variables */
+  --color-bg-main: #2c2c2c;
+  --color-bg-panel: #212121;
+  --color-primary: #4a45ff;
+  --color-text-default: #ffffff;
+  --color-text-muted: #b0b0b0;
+  --color-button-exit-bg: #0e0e0f;
+  --color-button-exit-text: #ffffff;
+  --color-icon: #ffffff;
+  --color-linear-gradient: linear-gradient(
+    90deg,
+    rgba(74, 69, 255, 0.1) 0%,
+    rgba(74, 69, 255, 0) 100%
+  );
+}
+
+@keyframes voice-pulse {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.animate-voice-pulse {
+  animation-name: voice-pulse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+button {
+  cursor: pointer;
+}
+
+@layer base {
+  body {
+    @apply text-text-default;
+    font-family: poppins, sans-serif;
+  }
+
+  button {
+    cursor: pointer !important;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
