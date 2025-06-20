@@ -17,7 +17,6 @@ interface VoiceAgentProps {
 }
 
 const VoiceAgent: React.FC<VoiceAgentProps> = ({
-  messages,
   setMessages,
   shouldStartCall,
   setShouldStartCall,
